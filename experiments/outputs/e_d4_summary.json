@@ -1,0 +1,81 @@
+{
+ "task": "E-D4 exact time travel for the developmental agent",
+ "seed": 7,
+ "evals": 500,
+ "r1": {
+  "sampledOk": true,
+  "sweepFirstMismatch": -1,
+  "sweepTicks": 501,
+  "verdict": "EXACT at all sampled ks AND all 501 ticks"
+ },
+ "r2": {
+  "ok": true,
+  "resumes": [
+   {
+    "k": 50,
+    "matchesTerminal": true,
+    "canonEqual": true,
+    "suffixCanonEqual": true
+   },
+   {
+    "k": 250,
+    "matchesTerminal": true,
+    "canonEqual": true,
+    "suffixCanonEqual": true
+   },
+   {
+    "k": 499,
+    "matchesTerminal": true,
+    "canonEqual": true,
+    "suffixCanonEqual": true
+   }
+  ]
+ },
+ "r3": {
+  "a_resumeFromBundle250": {
+   "mechanism": "E-D1 fromCheckpoint: driver.bundle() snapshot at eval 250 + driverFromBundle + plain run to 500 (receipted in e_d1_stages R5 on the engine substrate; this is the same mechanism on the core substrate)",
+   "finalHash": "0xcde06c1fd35b997c",
+   "matchesTerminal": true
+  },
+  "b_reachability": {
+   "fromCheckpointSingle": "2 of 501 ticks (origin + the one saved tick = 0.4%) without recompute; every other tick needs a re-run from seed",
+   "fromCheckpointEvery100": "6 of 501 ticks (1.2%) — each saved tick costs a full state bundle",
+   "rewind": "501 of 501 ticks (100%) — any tick, from ONE terminal state + the per-event journal"
+  },
+  "c_storage": {
+   "checkpointEvery100Bytes": 102619,
+   "checkpointBundleBytesAt0": 794,
+   "checkpointBundleBytesAt500": 24895,
+   "journalPlusTerminalBytes": 382999,
+   "journalPerEventBytesMean": 764,
+   "reachableTicksPerKB": {
+    "checkpointsEvery100": 0.06,
+    "rewindJournal": 1.339
+   }
+  }
+ },
+ "r4": {
+  "medianRewindUsPerUndoneTick": 8.238522798969012,
+  "medianReplayUsPerReplayedTick": 7.920385942352911,
+  "ratio": 0.9613842354534828,
+  "headline": {
+   "k0FullTravelMs": 2.999855000000025,
+   "replay500Ms": 5.988088000000062,
+   "ratio": 1.99612581274762,
+   "fullTravelCanonEqualsReplay": false
+  },
+  "verdict": "PER-TICK: A WASH — sealed-rule letter says replay cheaper by -4.0% (within timing noise; the per-tick medians compare ticks at different depths)"
+ },
+ "r5": {
+  "verdict": "CLEAN",
+  "violations": []
+ },
+ "chain": {
+  "rows": 17,
+  "ok": true,
+  "tip": "0xfbe8d28d576d39b4",
+  "diskOk": true,
+  "preRunTip": "0xbc2345afe60b39b8",
+  "preRunPrefixIntact": true
+ }
+}

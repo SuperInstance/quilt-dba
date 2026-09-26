@@ -1,0 +1,740 @@
+{
+ "task": "E-D5",
+ "name": "the fold curriculum",
+ "dev": true,
+ "runtime": {
+  "kind": "runtime.probe",
+  "t_probe_s": 0.07,
+  "projected_s": 2,
+  "kept_evals": 4000,
+  "cut": false,
+  "probe_stage_reached": "abstraction",
+  "probe_carried": true,
+  "row_hash": "0x7ff8e7ac3593a27d"
+ },
+ "r1": {
+  "perSeed": [
+   {
+    "seed": 101,
+    "prefix": 5,
+    "complete": false,
+    "ticks": {
+     "presence": 0,
+     "play": 250,
+     "making": 334,
+     "systems": 336,
+     "abstraction": 355
+    },
+    "nested": false,
+    "folded": false
+   }
+  ],
+  "completeN": 0,
+  "of": 1,
+  "entryTicks": {
+   "presence": {
+    "n": 1,
+    "mean": 0,
+    "min": 0,
+    "max": 0
+   },
+   "play": {
+    "n": 1,
+    "mean": 250,
+    "min": 250,
+    "max": 250
+   },
+   "making": {
+    "n": 1,
+    "mean": 334,
+    "min": 334,
+    "max": 334
+   },
+   "systems": {
+    "n": 1,
+    "mean": 336,
+    "min": 336,
+    "max": 336
+   },
+   "abstraction": {
+    "n": 1,
+    "mean": 355,
+    "min": 355,
+    "max": 355
+   },
+   "independence": null,
+   "synthesis": null
+  },
+  "verdict": "PARTIAL/REFUTED"
+ },
+ "r2": {
+  "growthTime": {
+   "CUR": [
+    334
+   ],
+   "SINGLE": [
+    124
+   ],
+   "UNG": [
+    120
+   ],
+   "mean_CUR": 334,
+   "mean_SINGLE": 124,
+   "mean_UNG": 120,
+   "dGrowthTime": 210,
+   "jointSE": 0
+  },
+  "growthPosition": {
+   "CUR": [
+    0.493747
+   ],
+   "SINGLE": [
+    1.003952
+   ],
+   "dPosition": -0.510205,
+   "jointSE": 0
+  },
+  "quality": {
+   "CUR": [
+    {
+     "attempts": 2,
+     "measured": 1,
+     "fracLowered": 1,
+     "reuseRate": 1,
+     "stability": 0,
+     "composite": 0.666667
+    }
+   ],
+   "SINGLE": [
+    {
+     "attempts": 1,
+     "measured": 1,
+     "fracLowered": 0,
+     "reuseRate": 1,
+     "stability": 0,
+     "composite": 0.333333
+    }
+   ],
+   "UNG": [
+    {
+     "attempts": 1,
+     "measured": 1,
+     "fracLowered": 0,
+     "reuseRate": 1,
+     "stability": 0.104223,
+     "composite": 0.368074
+    }
+   ],
+   "dComposite": 0.333334,
+   "jointSE": 0
+  },
+  "outcomes": {
+   "position": {
+    "CUR": [
+     13.163203
+    ],
+    "SINGLE": [
+     16.216228
+    ],
+    "UNG": [
+     11.992319
+    ],
+    "d": -3.053,
+    "jointSE": 0
+   },
+   "coverage": {
+    "CUR": [
+     87
+    ],
+    "SINGLE": [
+     120
+    ],
+    "UNG": [
+     98
+    ],
+    "d": -33,
+    "jointSE": 0
+   },
+   "foodEaten": {
+    "CUR": [
+     46
+    ],
+    "SINGLE": [
+     66
+    ],
+    "UNG": [
+     51
+    ],
+    "d": -20,
+    "jointSE": 0
+   },
+   "refusals": {
+    "CUR": [
+     1012
+    ],
+    "SINGLE": [
+     3801
+    ],
+    "UNG": [
+     3857
+    ],
+    "d": -2789,
+    "jointSE": 0
+   }
+  },
+  "debt": {
+   "playDebtForgiven": [
+    816
+   ],
+   "breachDebtForgiven": [
+    600
+   ],
+   "playRefusals": [
+    3
+   ]
+  }
+ },
+ "r3": {
+  "perSeed": [
+   {
+    "seed": 101,
+    "nestedReached": false,
+    "making2Reached": false,
+    "secondGrowth": null,
+    "reason": "cycle-not-reached"
+   }
+  ],
+  "confirmedN": 0,
+  "of": 1,
+  "verdict": "NOT-OBSERVED"
+ },
+ "r5canary": {
+  "kind": "findings.R5",
+  "dComposite": 0.333334,
+  "jointSE_composite": 0,
+  "dGrowthTime": 210,
+  "jointSE_growth": 0,
+  "outcomesQuiet": false,
+  "verdict": "DIFFERENT (the stage gates measurably change development — direction receipted in R2)",
+  "row_hash": "0x214fb43896405023"
+ },
+ "r4": {
+  "kind": "findings.R4",
+  "conservationChecks": 9258,
+  "conservationViolations": 0,
+  "violations_pass": true,
+  "chargeBreaches": 0,
+  "charge_pass": true,
+  "boundary": true,
+  "proposalRefusalsByStage": {
+   "presence": {
+    "made": 1,
+    "accepted": 0,
+    "refused": 1,
+    "deferred": 0,
+    "refuseRate": 1
+   },
+   "play": {
+    "made": 2,
+    "accepted": 2,
+    "refused": 0,
+    "deferred": 0,
+    "refuseRate": 0
+   },
+   "making": {
+    "made": 1,
+    "accepted": 1,
+    "refused": 0,
+    "deferred": 0,
+    "refuseRate": 0
+   },
+   "systems": {
+    "made": 1,
+    "accepted": 0,
+    "refused": 0,
+    "deferred": 1,
+    "refuseRate": 0
+   },
+   "abstraction": {
+    "made": 11,
+    "accepted": 1,
+    "refused": 6,
+    "deferred": 4,
+    "refuseRate": 0.5455
+   }
+  },
+  "seedPrediction": {
+   "presence_refuses_100": true,
+   "play_refuses_0": true
+  },
+  "verdict": "PASS",
+  "row_hash": "0xb4aa5a3a13a6c7d8"
+ },
+ "runs": {
+  "CUR": [
+   {
+    "arm": "CUR",
+    "seed": 101,
+    "worldSeed": 1810039509,
+    "evals": 2509,
+    "stageId": "abstraction",
+    "stageHistory": [
+     {
+      "stageId": "presence",
+      "enteredAt": 0,
+      "depth": 0,
+      "exitedAt": 250
+     },
+     {
+      "stageId": "play",
+      "enteredAt": 250,
+      "depth": 0,
+      "exitedAt": 334
+     },
+     {
+      "stageId": "making",
+      "enteredAt": 334,
+      "depth": 0,
+      "exitedAt": 336
+     },
+     {
+      "stageId": "systems",
+      "enteredAt": 336,
+      "depth": 0,
+      "exitedAt": 355
+     },
+     {
+      "stageId": "abstraction",
+      "enteredAt": 355,
+      "depth": 0
+     }
+    ],
+    "position": 13.163203,
+    "velocity": 0.000346,
+    "coverage": 87,
+    "foodEaten": 46,
+    "refusals": 1012,
+    "refusalsByStage": {
+     "abstraction": 1009
+    },
+    "playRefusals": 3,
+    "growthRefusals": 7,
+    "playDebtForgiven": 816,
+    "breachDebtForgiven": 600,
+    "proposals": {
+     "made": 16,
+     "accepted": 4,
+     "refused": 7,
+     "deferred": 5,
+     "idle": 1,
+     "byStage": {
+      "presence": {
+       "made": 1,
+       "accepted": 0,
+       "refused": 1,
+       "deferred": 0
+      },
+      "play": {
+       "made": 2,
+       "accepted": 2,
+       "refused": 0,
+       "deferred": 0
+      },
+      "making": {
+       "made": 1,
+       "accepted": 1,
+       "refused": 0,
+       "deferred": 0
+      },
+      "systems": {
+       "made": 1,
+       "accepted": 0,
+       "refused": 0,
+       "deferred": 1
+      },
+      "abstraction": {
+       "made": 11,
+       "accepted": 1,
+       "refused": 6,
+       "deferred": 4
+      }
+     }
+    },
+    "refusedProposals": [
+     {
+      "eval": 250,
+      "stageId": "presence",
+      "cell": "ask:presence",
+      "why": "presence: refuse all growth proposals (seed-edu L61-73)"
+     },
+     {
+      "eval": 1143,
+      "stageId": "abstraction",
+      "cell": "policy.concrete",
+      "why": "abstraction: proposal introduces 1 new params; only param-REUSE allowed (seed-edu L127)"
+     },
+     {
+      "eval": 1393,
+      "stageId": "abstraction",
+      "cell": "policy.concrete",
+      "why": "abstraction: proposal introduces 1 new params; only param-REUSE allowed (seed-edu L127)"
+     },
+     {
+      "eval": 1643,
+      "stageId": "abstraction",
+      "cell": "policy.concrete",
+      "why": "abstraction: proposal introduces 1 new params; only param-REUSE allowed (seed-edu L127)"
+     },
+     {
+      "eval": 1893,
+      "stageId": "abstraction",
+      "cell": "policy.concrete",
+      "why": "abstraction: proposal introduces 1 new params; only param-REUSE allowed (seed-edu L127)"
+     },
+     {
+      "eval": 2143,
+      "stageId": "abstraction",
+      "cell": "policy.concrete",
+      "why": "abstraction: proposal introduces 1 new params; only param-REUSE allowed (seed-edu L127)"
+     },
+     {
+      "eval": 2393,
+      "stageId": "abstraction",
+      "cell": "policy.concrete",
+      "why": "abstraction: proposal introduces 1 new params; only param-REUSE allowed (seed-edu L127)"
+     }
+    ],
+    "growthLog": [
+     {
+      "eval": 250,
+      "stageId": "play",
+      "cells": [
+       "play.tower.a"
+      ],
+      "kind": "ephemeral",
+      "gamma": 250,
+      "eta": 0,
+      "edges": 0,
+      "newParams": 0,
+      "reusedParams": 0,
+      "verdict": "unmade",
+      "position": 0
+     },
+     {
+      "eval": 269,
+      "stageId": "play",
+      "cells": [
+       "play.tower.b"
+      ],
+      "kind": "ephemeral",
+      "gamma": 250,
+      "eta": 316,
+      "edges": 0,
+      "newParams": 0,
+      "reusedParams": 0,
+      "verdict": "unmade",
+      "position": 0.021097
+     },
+     {
+      "eval": 334,
+      "stageId": "making",
+      "cells": [
+       "sensors.gradient"
+      ],
+      "kind": "measuring",
+      "gamma": 250,
+      "eta": 307,
+      "edges": 2,
+      "newParams": 0,
+      "reusedParams": 0,
+      "verdict": "kept",
+      "position": 0.493747,
+      "delta": -20.535,
+      "postMean": 286.025,
+      "postVar": 76814.449,
+      "preVar": 57105.486,
+      "stability": 0,
+      "zeroBaseline": false
+     },
+     {
+      "eval": 643,
+      "stageId": "abstraction",
+      "cells": [
+       "policy.kernel"
+      ],
+      "kind": "measuring",
+      "gamma": 250,
+      "eta": 320,
+      "edges": 2,
+      "newParams": 0,
+      "reusedParams": 1,
+      "verdict": "inconclusive-kept",
+      "position": 6.092545,
+      "delta": null,
+      "postMean": null,
+      "postVar": null,
+      "preVar": 71472.45,
+      "stability": null,
+      "zeroBaseline": false
+     }
+    ],
+    "sheet": {
+     "V": 26,
+     "E": 26
+    },
+    "beta1": 1,
+    "features": [
+     "policy.kernel",
+     "sensors.gradient"
+    ],
+    "jevCounts": {
+     "execute": 0,
+     "escalate": 4,
+     "discard": 0,
+     "ignored": 2
+    },
+    "teacherProposes": 13,
+    "nudges": 0,
+    "questions": 5782,
+    "finalMeanEta": 320,
+    "diverged": true,
+    "divergenceWhy": "starvation>=1000",
+    "grewE1": false,
+    "maxEta": 2000,
+    "conservationChecks": 1258,
+    "conservationViolations": 0,
+    "secondGrowth": null,
+    "firstRealGrowthAt": 334,
+    "firstRealGrowthPos": 0.493747,
+    "growthEvents": {
+     "realAttempts": 2,
+     "kept": 1,
+     "reverted": 0,
+     "ephemeral": 2,
+     "e1pair": 0
+    },
+    "hash": "0x4cac1957b282450c",
+    "quality": {
+     "attempts": 2,
+     "measured": 1,
+     "fracLowered": 1,
+     "reuseRate": 1,
+     "stability": 0,
+     "composite": 0.666667
+    }
+   }
+  ],
+  "SINGLE": [
+   {
+    "arm": "SINGLE",
+    "seed": 101,
+    "worldSeed": 1810039509,
+    "evals": 4000,
+    "stageId": "presence",
+    "stageHistory": [
+     {
+      "stageId": "presence",
+      "enteredAt": 0,
+      "depth": 0
+     }
+    ],
+    "position": 16.216228,
+    "velocity": 0.000014,
+    "coverage": 120,
+    "foodEaten": 66,
+    "refusals": 3801,
+    "refusalsByStage": {
+     "e-d1": 3801
+    },
+    "playRefusals": 0,
+    "growthRefusals": 0,
+    "playDebtForgiven": 0,
+    "breachDebtForgiven": 0,
+    "proposals": {
+     "made": 0,
+     "accepted": 0,
+     "refused": 0,
+     "deferred": 0,
+     "idle": 0,
+     "byStage": {}
+    },
+    "refusedProposals": [],
+    "growthLog": [
+     {
+      "eval": 124,
+      "stageId": "e-d1:stage2",
+      "cells": [
+       "sensors.language",
+       "teacher.label"
+      ],
+      "kind": "real-e-d1",
+      "gamma": 0,
+      "eta": 0,
+      "edges": 4,
+      "newParams": 0,
+      "reusedParams": 0,
+      "verdict": "kept-observed",
+      "position": 1.003952,
+      "delta": 80.121,
+      "postMean": 293.321,
+      "postVar": 65224.936,
+      "preVar": 45334.96,
+      "stability": 0,
+      "zeroBaseline": false
+     }
+    ],
+    "sheet": {
+     "V": 26,
+     "E": 26
+    },
+    "beta1": 1,
+    "features": [
+     "sensors.language"
+    ],
+    "jevCounts": {
+     "execute": 1,
+     "escalate": 4,
+     "discard": 0,
+     "ignored": 0
+    },
+    "teacherProposes": 20,
+    "nudges": 0,
+    "questions": 15855,
+    "finalMeanEta": 240,
+    "diverged": false,
+    "divergenceWhy": null,
+    "grewE1": true,
+    "maxEta": 2000,
+    "conservationChecks": 4000,
+    "conservationViolations": 0,
+    "secondGrowth": null,
+    "firstRealGrowthAt": 124,
+    "firstRealGrowthPos": 1.003952,
+    "growthEvents": {
+     "realAttempts": 1,
+     "kept": 1,
+     "reverted": 0,
+     "ephemeral": 0,
+     "e1pair": 1
+    },
+    "wall_s": 0.044,
+    "hash": "0x81d6e33ef485d55e",
+    "quality": {
+     "attempts": 1,
+     "measured": 1,
+     "fracLowered": 0,
+     "reuseRate": 1,
+     "stability": 0,
+     "composite": 0.333333
+    }
+   }
+  ],
+  "UNG": [
+   {
+    "arm": "UNG",
+    "seed": 101,
+    "worldSeed": 1810039509,
+    "evals": 4000,
+    "stageId": "presence",
+    "stageHistory": [
+     {
+      "stageId": "presence",
+      "enteredAt": 0,
+      "depth": 0
+     }
+    ],
+    "position": 11.992319,
+    "velocity": 0.000009,
+    "coverage": 98,
+    "foodEaten": 51,
+    "refusals": 3857,
+    "refusalsByStage": {
+     "e-d1": 3857
+    },
+    "playRefusals": 0,
+    "growthRefusals": 0,
+    "playDebtForgiven": 0,
+    "breachDebtForgiven": 0,
+    "proposals": {
+     "made": 0,
+     "accepted": 0,
+     "refused": 0,
+     "deferred": 0,
+     "idle": 0,
+     "byStage": {}
+    },
+    "refusedProposals": [],
+    "growthLog": [
+     {
+      "eval": 120,
+      "stageId": "e-d1:stage2",
+      "cells": [
+       "sensors.language",
+       "teacher.label"
+      ],
+      "kind": "real-e-d1",
+      "gamma": 0,
+      "eta": 0,
+      "edges": 4,
+      "newParams": 0,
+      "reusedParams": 0,
+      "verdict": "kept-observed",
+      "position": 1.008267,
+      "delta": 43.809,
+      "postMean": 301.429,
+      "postVar": 46638.245,
+      "preVar": 52064.596,
+      "stability": 0.10422342936705387,
+      "zeroBaseline": false
+     }
+    ],
+    "sheet": {
+     "V": 26,
+     "E": 26
+    },
+    "beta1": 1,
+    "features": [
+     "sensors.language"
+    ],
+    "jevCounts": {
+     "execute": 0,
+     "escalate": 0,
+     "discard": 0,
+     "ignored": 0
+    },
+    "teacherProposes": 20,
+    "nudges": 0,
+    "questions": 15908,
+    "finalMeanEta": 271,
+    "diverged": false,
+    "divergenceWhy": null,
+    "grewE1": true,
+    "maxEta": 1333,
+    "conservationChecks": 4000,
+    "conservationViolations": 0,
+    "secondGrowth": null,
+    "firstRealGrowthAt": 120,
+    "firstRealGrowthPos": 1.008267,
+    "growthEvents": {
+     "realAttempts": 1,
+     "kept": 1,
+     "reverted": 0,
+     "ephemeral": 0,
+     "e1pair": 1
+    },
+    "wall_s": 0.044,
+    "hash": "0x4b2c3b73f4872923",
+    "quality": {
+     "attempts": 1,
+     "measured": 1,
+     "fracLowered": 0,
+     "reuseRate": 1,
+     "stability": 0.104223,
+     "composite": 0.368074
+    }
+   }
+  ]
+ },
+ "chain_tip": "0xc6bf37010a2bdfd6",
+ "chain_ok": true
+}
