@@ -1,0 +1,240 @@
+{
+ "task": "E-D1",
+ "name": "the stages experiment",
+ "boundary": {
+  "kind": "boundary",
+  "ok_1585": "ok",
+  "refuse_1586": "refuse",
+  "pass": true,
+  "row_hash": "0x5c17afe64cad8a07"
+ },
+ "r1": {
+  "grownA": 3,
+  "of": 3,
+  "verdict": "CONFIRMED"
+ },
+ "r2": {
+  "var_A": 0,
+  "var_D": 0,
+  "mean_pos_A": 24500,
+  "mean_pos_D": 10,
+  "verdict": "CONFIRMED"
+ },
+ "r3": {
+  "mean_debt_B": 0,
+  "refusals_A": 0,
+  "mean_pos_A": 24500,
+  "mean_pos_B": 24500,
+  "jointSE": 0,
+  "verdict": "NEVER-BOUND (law untested in vivo at these parameters; boundary test carries the guarantee)"
+ },
+ "r5": {
+  "full_hash": "1de2f9c27e8d",
+  "resumed_hash": "1de2f9c27e8d",
+  "pass": true
+ },
+ "runs": {
+  "A": [
+   {
+    "seed": 101,
+    "enforce": true,
+    "mode": "jev-gated",
+    "evals": 5000,
+    "position": 24500,
+    "grown": true,
+    "growthAt": 299,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 2542,
+    "jevExecutes": 1,
+    "jev_log_len": 101,
+    "beta1": {
+     "V": 26,
+     "E": 26,
+     "beta1": 1
+    },
+    "hash": "8c8a54a43f10",
+    "wall_s": 0.3
+   },
+   {
+    "seed": 118,
+    "enforce": true,
+    "mode": "jev-gated",
+    "evals": 5000,
+    "position": 24500,
+    "grown": true,
+    "growthAt": 299,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 2542,
+    "jevExecutes": 1,
+    "jev_log_len": 101,
+    "beta1": {
+     "V": 26,
+     "E": 26,
+     "beta1": 1
+    },
+    "hash": "8c8a54a43f10",
+    "wall_s": 0.3
+   },
+   {
+    "seed": 135,
+    "enforce": true,
+    "mode": "jev-gated",
+    "evals": 5000,
+    "position": 24500,
+    "grown": true,
+    "growthAt": 299,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 2542,
+    "jevExecutes": 1,
+    "jev_log_len": 101,
+    "beta1": {
+     "V": 26,
+     "E": 26,
+     "beta1": 1
+    },
+    "hash": "8c8a54a43f10",
+    "wall_s": 0.3
+   }
+  ],
+  "B": [
+   {
+    "seed": 101,
+    "enforce": false,
+    "mode": "jev-gated",
+    "evals": 5000,
+    "position": 24500,
+    "grown": true,
+    "growthAt": 299,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 2542,
+    "jevExecutes": 1,
+    "jev_log_len": 101,
+    "beta1": {
+     "V": 26,
+     "E": 26,
+     "beta1": 1
+    },
+    "hash": "8c8a54a43f10",
+    "wall_s": 0.3
+   },
+   {
+    "seed": 118,
+    "enforce": false,
+    "mode": "jev-gated",
+    "evals": 5000,
+    "position": 24500,
+    "grown": true,
+    "growthAt": 299,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 2542,
+    "jevExecutes": 1,
+    "jev_log_len": 101,
+    "beta1": {
+     "V": 26,
+     "E": 26,
+     "beta1": 1
+    },
+    "hash": "8c8a54a43f10",
+    "wall_s": 0.3
+   },
+   {
+    "seed": 135,
+    "enforce": false,
+    "mode": "jev-gated",
+    "evals": 5000,
+    "position": 24500,
+    "grown": true,
+    "growthAt": 299,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 2542,
+    "jevExecutes": 1,
+    "jev_log_len": 101,
+    "beta1": {
+     "V": 26,
+     "E": 26,
+     "beta1": 1
+    },
+    "hash": "8c8a54a43f10",
+    "wall_s": 0.2
+   }
+  ],
+  "D": [
+   {
+    "seed": 101,
+    "enforce": true,
+    "mode": "unguided",
+    "evals": 5000,
+    "position": 10,
+    "grown": false,
+    "growthAt": null,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 4994,
+    "jevExecutes": 0,
+    "jev_log_len": 100,
+    "beta1": {
+     "V": 24,
+     "E": 22,
+     "beta1": -1
+    },
+    "hash": "c20dbef339c9",
+    "wall_s": 0.2
+   },
+   {
+    "seed": 118,
+    "enforce": true,
+    "mode": "unguided",
+    "evals": 5000,
+    "position": 10,
+    "grown": false,
+    "growthAt": null,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 4994,
+    "jevExecutes": 0,
+    "jev_log_len": 100,
+    "beta1": {
+     "V": 24,
+     "E": 22,
+     "beta1": -1
+    },
+    "hash": "c20dbef339c9",
+    "wall_s": 0.2
+   },
+   {
+    "seed": 135,
+    "enforce": true,
+    "mode": "unguided",
+    "evals": 5000,
+    "position": 10,
+    "grown": false,
+    "growthAt": null,
+    "refusals": 0,
+    "debt": 0,
+    "rewardCount": 4994,
+    "jevExecutes": 0,
+    "jev_log_len": 100,
+    "beta1": {
+     "V": 24,
+     "E": 22,
+     "beta1": -1
+    },
+    "hash": "c20dbef339c9",
+    "wall_s": 0.2
+   }
+  ]
+ },
+ "runtime": {
+  "t_probe_s": 0.08,
+  "seeds": 3,
+  "evals": 5000
+ },
+ "chain_tip": "0xdbb7c528df7b9471",
+ "chain_ok": true
+}
