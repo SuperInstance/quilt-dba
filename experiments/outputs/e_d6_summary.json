@@ -1,0 +1,63 @@
+{
+ "task": "E-D6 order-naturality of the conservation accounting",
+ "seed": 7,
+ "evals": 500,
+ "harvested": {
+  "chargedEvals": 500,
+  "refused": 171,
+  "applied": 329,
+  "holds": 0,
+  "maxDuePrefix": 1
+ },
+ "arm_int": {
+  "maxPairwiseDivergence": {
+   "sumGamma": 0,
+   "sumEta": 0,
+   "refusals": 0,
+   "maxEta": 0,
+   "breachMass": 0,
+   "passCount": 0,
+   "refuseCount": 0
+  },
+  "distinctStateHashes": 1,
+  "verdict": "PASS (exact 0)"
+ },
+ "arm_f64": {
+  "validityGate": true,
+  "jepaErrMaxDiv": 0.1333333333333333,
+  "inducedEtaPredMaxDiv": 267,
+  "vibePositionSpread": 8.412107397436056,
+  "vibeVelocitySpread": 0.02105736151157734,
+  "verdict": "PASS-AS-BY-SPEC"
+ },
+ "arm_rsp": {
+  "maxDuePrefix": 1,
+  "syntheticDistinctTerminalHashes": 6,
+  "syntheticDistinctPlacements": 3,
+  "verdict": "INFO"
+ },
+ "machEps": 2.220446049250313e-16,
+ "smokes": [
+  {
+   "file": "experiments/smoke_ed4.mjs",
+   "code": 0,
+   "tail": "SMOKE ED4 OK (8/8 checks)"
+  },
+  {
+   "file": "experiments/smoke_ed5.mjs",
+   "code": 0,
+   "tail": "SMOKE ED5 OK (39/39 checks)"
+  },
+  {
+   "file": "smoke.mjs (root)",
+   "code": 1,
+   "tail": "Node.js v24.21.0"
+  }
+ ],
+ "chain": {
+  "rows": 11,
+  "ok": true,
+  "diskOk": true,
+  "tip": "0x0964722e3463820a"
+ }
+}
