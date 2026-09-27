@@ -1,0 +1,55 @@
+{
+ "task": "E-D7 crash-grade durability",
+ "seed": 7,
+ "evals": 500,
+ "killTrials": 16,
+ "armTrials": 8,
+ "truncTrials": 30,
+ "flips": {
+  "bare": {
+   "flips": 450,
+   "loud": 263,
+   "silentWrong": 182,
+   "silentBenign": 5
+  },
+  "sealedDetected": 450,
+  "sealedFlips": 450,
+  "caseFlips": 360,
+  "caseDetected": 360
+ },
+ "r5": {
+  "killTrials": 8,
+  "recovered": 8,
+  "resumedTerminalExact": 8,
+  "suffixCanonEqual": 8,
+  "roundTrip": {
+   "sampledOk": true,
+   "checks": 6
+  }
+ },
+ "r6": {
+  "corruptLoud": 3,
+  "corruptTrials": 3,
+  "tamperSilentReplay": 1,
+  "controlZeroCall": {
+   "firstSource": "live",
+   "replaySource": "cache",
+   "cached": true,
+   "verdictMatches": true
+  }
+ },
+ "verdicts": {
+  "R1": "PASS",
+  "R2": "PASS",
+  "R3": "PASS (sealed layer)",
+  "R4": "PASS (determinism; arms INFO-NULL as predicted)",
+  "R5": "PASS",
+  "R6": "PASS (loud refusal)"
+ },
+ "chain": {
+  "rows": 16,
+  "ok": true,
+  "diskOk": true,
+  "tip": "0x378fffb6e9d7ef61"
+ }
+}

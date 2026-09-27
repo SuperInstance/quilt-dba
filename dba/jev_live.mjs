@@ -153,7 +153,14 @@ export class LiveJev {
     this.rows = [];             // in-memory mirror of the journal
     this.cache = {};
     if (cachePath && existsSync(cachePath)) {
-      try { this.cache = JSON.parse(readFileSync(cachePath, 'utf8')); } catch { this.cache = {}; }
+      try { this.cache = JSON.parse(readFileSync(cachePath, 'utf8')); } catch (e) {
+        // E-D7 (receipted): a corrupt cache used to SILENTLY reset to {} here —
+        // a torn/0-byte cache file erased the negative cache and turned the
+        // receipted zero-call deterministic replay into fresh live spend with
+        // no warning. Fail closed instead: refuse loudly, live-call machinery
+        // untouched. The operator moves the file aside or repairs it.
+        throw new Error(`LiveJev: live-decision cache at ${cachePath} is corrupt (${String(e?.message ?? e).slice(0, 80)}) — refusing silent reset (move the file aside or repair it)`);
+      }
     }
     if (journalPath) mkdirSync(dirname(journalPath), { recursive: true });
   }
