@@ -1,0 +1,266 @@
+{
+  "dialect": "w69-surface-c-receipt/v1",
+  "surface": "C",
+  "substrate": "Float64Array register file + Uint32Array tag words (SurfaceC, 512 registers)",
+  "projection": "mapRegion = mmap(2); subarray views = unmediated loads/stores (zero-copy)",
+  "round22": {
+    "surface": "C",
+    "ops": 28,
+    "parityCount": 28,
+    "parity": "28/28",
+    "baselineCost": 7168,
+    "bandedCost": 2292,
+    "costRatio": 0.319754,
+    "costCap": 0.38,
+    "escalations": 8,
+    "perturbedOps": [
+      4,
+      7,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24
+    ],
+    "escalationTrace": [
+      {
+        "op": 0,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 1,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 2,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 3,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 4,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 5,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 6,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 7,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 8,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 9,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 10,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 11,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 12,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 13,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 14,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 15,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 16,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 17,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 18,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 19,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 20,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 21,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 22,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 23,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 24,
+        "decision": "ESCALATE",
+        "x": 68,
+        "breaches": 1,
+        "level": 0
+      },
+      {
+        "op": 25,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 26,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      },
+      {
+        "op": 27,
+        "decision": "REST",
+        "x": 0,
+        "breaches": 0,
+        "level": 0
+      }
+    ],
+    "mixRounds": 64,
+    "law": "decide(x, R) = (x in R) ? REST : ESCALATE  — vendor/band-law.mjs (pinned)",
+    "vendoredSha256": "1e3cb4d2df1677f4461e8744615b8617898f96fc84108b2241ce50ead0f4f318"
+  },
+  "controlLadder": {
+    "ladder": [
+      99,
+      99,
+      99
+    ],
+    "flat": true,
+    "opsPerRung": 99,
+    "level": 3
+  },
+  "scarsSurviveRewind": {
+    "proven": true,
+    "registrySize": 9,
+    "chainVerified": true,
+    "byteRestored": true
+  },
+  "jitSplit": {
+    "entropyFlatBlock": 3,
+    "entropyHotBlock": 3,
+    "entropyStormBlock": 4.9799,
+    "splitTriggered": true,
+    "splitDepth": 1,
+    "postSplitEntropyMax": 4.75,
+    "stats": {
+      "regions": 4,
+      "splits": 1,
+      "maxDepth": 1,
+      "granule": 64
+    }
+  },
+  "stitch": {
+    "firstEnvId": "9bf3eb905f9d2c8444f5be2f04aa4d7cef61cbe64dc1948efca5b4d6395e9c84",
+    "source": "SuperInstance/exoj spec/spec_sha.json (real cross-repo receipt)"
+  },
+  "law": "decide(x, R) = (x in R) ? REST : ESCALATE  — vendor/band-law.mjs (pinned)",
+  "vendoredSha256": "1e3cb4d2df1677f4461e8744615b8617898f96fc84108b2241ce50ead0f4f318",
+  "spec": "spec/SPEC.md (pre-registered, sealed spec-sha-v1)",
+  "note": "Costs are measured work units (fingerprint scan = len, eager key-mix = keyLen x 64 rounds, replay = 1), never declared. Parity is op-for-op against the eager baseline."
+}

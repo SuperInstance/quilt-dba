@@ -54,3 +54,37 @@ npm install
 node experiments/smoke.mjs        # 13/13
 node experiments/e_d1_stages.mjs  # receipted, chain-verified
 ```
+
+## Wave-69 — Surface C (Return Stick, Round 22)
+
+The bare-metal surface: a `Float64Array` register file + parallel `Uint32Array`
+tag words where **mapRegion IS mmap** — the returned subarray views are
+unmediated loads/stores (zero-copy, `view.buffer === registers.buffer`), no
+accessor object, no per-read allocation.
+
+- **Flat control ladder** (`surfaces/controlMap.mjs`): control cells map
+  directly onto the register bank, one granule each, no hierarchy object in
+  between; the negative control reads exactly **99 → 99 → 99** and drift is a
+  loud `E_CONTROL_DRIFT`, never absorbed.
+- **JIT topological splitting** (`surfaces/jitSplit.mjs`): regions above
+  4.0 bits of Shannon entropy split copy-on-write with an atomic base-table
+  re-point — no locks, no blocking, bounded (half-the-bytes) split work;
+  readers see old-or-new layout, never partial state.
+- **Sticky scars** (`surfaces/scars.mjs`): append-only chain of
+  cost anomalies / die rolls / split events; **rewinds rewrite state, never
+  history** (S4: restore leaves the chain untouched and verified).
+- **Round 22 on a third surface** (`surfaces/bandLaw.mjs`): the band law is
+  VENDORED byte-for-byte from the canonical copy (pinned
+  `1e3cb4d2…`, the same bytes madlibs-jev and purpose-loops pin) and
+  instantiated on registers: REST replays cache-verified outputs, ESCALATE
+  re-executes eagerly and scars, consecutive breaches compound through
+  hysteresis levels (level 3 latches eager). Run of record
+  (`surfaces/prove.mjs` → `experiments/outputs/w69_surface_c_receipt.json`):
+  **28/28 parity at costRatio 0.319754 (cap 0.38)**, ladder flat, split fired
+  at 4.98 bits, scars rewind-safe.
+- **Stitch ledger** (`stitches/ledger.mjs`): sxc1 envelope ids land in a
+  chain-sealed JSONL; malformed ids are refused `E_STITCH_SEAL`; the first
+  real stitch is exoj's own spec seal (a cross-repo receipt).
+
+Pathway: exoj emits `sxc1` → cocapn verifies (`COMPILED | INDETERMINATE`) →
+quilt-dba stitches the id into the durable chain.
