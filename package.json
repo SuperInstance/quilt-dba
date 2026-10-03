@@ -3,7 +3,14 @@
   "version": "0.1.0",
   "description": "The quilt-native developmental agent: 12-cell seed sheet, conservation law gamma+eta<=C, growth as cell-graph addition (DBA seeds 1-3, quilt-native reduction)",
   "type": "module",
-  "scripts": { "smoke": "node experiments/smoke.mjs", "e_d1": "node experiments/e_d1_stages.mjs" },
+  "scripts": {
+    "smoke": "node experiments/smoke.mjs",
+    "e_d1": "node experiments/e_d1_stages.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "gate": "node tools/spec_gate.mjs"
+  },
   "license": "MIT",
-  "dependencies": { "yaml": "^2.4.0" }
+  "dependencies": {
+    "yaml": "^2.4.0"
+  }
 }

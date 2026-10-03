@@ -1,0 +1,13 @@
+name: CI
+on: [push, workflow_dispatch]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Spec gate (specification-first)
+        run: node tools/spec_gate.mjs
+      - name: Unit batteries (offline, deterministic)
+        run: npm test
